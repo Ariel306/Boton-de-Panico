@@ -1,0 +1,220 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  header{
+    font-family: Helvetica;
+    width: 480px;
+    margin: 0 auto;
+  }
+  ul{
+    list-style: none;
+  }
+  #menu li>a{
+    background-color: grey;
+    color: white;
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    min-width: 100px;
+  }
+  #menu li>a:hover{
+    color: #000;
+    background-color: #eaeaea;
+  }
+  #menu>li{
+    float: left;
+    text-align:center
+  }
+  #menu>li>ul{
+    display: none;
+  }
+  #menu>li:hover>ul {
+    display:block;
+  }
+
+.contenedor-botones {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.boton {
+    /*border: 1px solid #2e518b; /*anchura, estilo y color borde*/
+    /*padding: 10px; /*espacio alrededor texto*/
+    /*background-color: #2e518b; /*color botón*/
+    /*color: #ffffff; /*color texto*/
+    /*text-decoration: none; /*decoración texto*/
+    /*text-transform: uppercase; /*capitalización texto*/
+    /*font-family: 'Helvetica', sans-serif; /*tipografía texto*/
+    /*border-radius: 50px; /*bordes redondos*/
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    height: 50px;
+    background: #ff8c1c;
+    color: #f0ffff;
+    font-family: "Homer Simpson UI";
+    font-size: 20px;
+    font-weight: 400;
+    border: none;
+    cursor: pointer;
+    transition: .3s ease all;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    }
+
+.boton.cero::after{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: #c4b107;
+  position: absolute;
+  z-index: 1;
+  top: -80px;
+  left: 0;
+  transition: .3s ease-in-out all;
+}   
+.boton.cero:hover::after{
+  top: 0;
+} 
+
+.boton.uno span {
+  transition: .4s ease-in-out all;
+  position: absolute;
+  left: 35%;
+}
+.boton.uno .icono{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  left: -40px;
+  transition: .3s ease-in-out all;
+  opacity: 0;
+}
+.boton.cinco svg{
+  color: #fff;
+  width: 35px;
+  height: 35px;
+}
+.boton.uno:hover .icono{
+  left: calc(110% - 50px);
+  opacity: 1;
+}
+.boton.uno:hover span{
+  left: 20px;
+}
+.boton.uno:hover{
+  background: #ff8000;
+}
+
+/*ff471a
+b34700*/
+
+.boton span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
+
+/*ESTADISTICA*/
+
+.panel{
+  /*El espacio abajo*/
+  margin-bottom: 0px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.bg-rojo{
+  background-color: rgba(178, 34, 34, 0.78);
+}
+.bg-azul{
+  background-color: rgba(34, 62, 178, 0.78);
+}
+.bg-verde{
+  background-color: rgba(34, 178, 34, 0.78);
+}
+.bg-amarillo{
+  background-color: rgba(178, 139, 34, 0.78);
+}
+
+
+.icono{
+  width:40%;
+  padding: 25px 15px;
+  display: inline-block;
+  text-align: center;
+}
+.icono svg{
+  font-size: 50px;
+  color: white;
+}
+
+.valor{
+  width: 58%;
+  padding-top: 15px;
+  float: right;
+  text-align: center;
+}
+
+.cantidad{
+  margin: 0 !important;
+}
+.caja{
+  padding: 20px;
+  background: #ffffff;
+  box-shadow: 0px 0px 4px 0px rgba(2, 2, 2, 0.1);
+}
+.input-group{
+  display: block !important;
+}
+input{
+  margin-bottom: 10px !important;
+}
+bg{
+  background-size: cover;
+}
+
+/* SLIDER BANER  https://www.youtube.com/watch?v=ZJHOrXZq11E*/
+/*Contenedor del baner, le pongo el largo al 100%, con margen auto para centrarlo y overflow para */
+.contenedor{
+  width: 100%;
+  margin: auto;
+  /*Para que el usuario no pueda ahcer scrol a la imagen*/
+  overflow: hidden;
+}
+
+/*Este contenido es la image, y va a decir de que alto va a ser el Contenedor, */
+#slider{
+  width: 2000px;
+  height: 150px;
+  /*Esta es la imagen*/
+  background-image: url(../imagenes/VIGILANDO.png);
+  /* Aca le digo que ocupe el 90 del ancho y del alto */
+  background-size: 90% 90%;
+  /* Coloco el nombre de la animacion y cuanto va a durar, linear determina que el tiempo de la animacion sea la misma*/ 
+  animation: slider 10s infinite linear;
+}
+/*Lo mismo de arriba, pero con imagen diferente*/
+#slider2{
+  width: 2000px;
+  height: 150px;
+
+  background-image: url(../imagenes/ALERTA.png);
+  background-size: 90% 90%;
+
+  animation: slider 10s infinite linear;
+}
+
+/*aca le digo hasta donde se tiene que mover la animacion*/
+@keyframes slider{
+  to{
+    background-position: 2000px;
+  }
+}

@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    
+  }
+  /* Color toda la pagina */
+ 
+  a, li{
+    font-family:Arial;
+    color: #212529;
+    font-size: 25px;
+    text-decoration:none;
+    font-weight: bold;
+  }
+  /* tamaño logo */
+  .logo-header img{
+    width: 250px;
+  }
+  /* estilos navegacion */
+  header{
+    background-color: #e67100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 2rem;
+  }
+  /*  */
+  .nav-menu ul{
+    display: flex;
+    align-items: center;
+  }
+  /*  */
+  .nav-menu li{
+    margin-right: 3.5rem;
+  }
+  /* al pasar el raton pasa esto */
+  .nav-menu a:hover{
+    color: #337ab7;
+  }
+  
+  .menu-icon svg{
+    width: 30px;
+    height: 30px;
+    border-radius: 2px;
+  }
+  .menu-icon, #check{
+    display: none;
+  }
+  
+  @media (max-width:768px){
+    .checkbtn{
+      display: block;
+    }
+    .menu-icon{
+      display: block;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      cursor: pointer;
+    }
+    .nav-menu ul{
+      display: block;
+      position: fixed;
+      top: 70px;
+      left: -100%;
+      background: #e67100;
+      width: 100%;
+      height: 100vh;
+      right: 0;
+    }
+    .nav-menu ul li{
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      margin: 0;
+    }
+    .nav-menu ul li:last-child{
+      background: none;
+      padding: 1rem;
+    }
+    #check:checked ~ ul{
+      left: 0;
+      transition: all .25s;
+    }
+  }
+
+/*ESTADISTICA*/
+
+.panel{
+    /*El espacio abajo*/
+    margin-bottom: 0px;
+    background-color: #fff;
+    border-radius: 4px;
+  }
+  
+  .bg-rojo{
+    background-color: rgba(178, 34, 34, 0.78);
+  }
+  .bg-azul{
+    background-color: rgba(34, 62, 178, 0.78);
+  }
+  .bg-verde{
+    background-color: rgba(34, 178, 34, 0.78);
+  }
+  .bg-amarillo{
+    background-color: rgba(178, 139, 34, 0.78);
+  }
+  
+  
+  .icono{
+    width:40%;
+    padding: 25px 15px;
+    display: inline-block;
+    text-align: center;
+  }
+  .icono svg{
+    font-size: 50px;
+    color: white;
+  }
+  
+  .valor{
+    width: 58%;
+    padding-top: 15px;
+    float: right;
+    text-align: center;
+  }
+  
+  .cantidad{
+    margin: 0 !important;
+  }
+  .caja{
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 0px 4px 0px rgba(2, 2, 2, 0.1);
+  }
+  .input-group{
+    display: block !important;
+  }
+  input{
+    margin-bottom: 10px !important;
+  }
+  bg{
+    background-size: cover;
+  }
+  
+
+  /* SLIDER BANER  https://www.youtube.com/watch?v=ZJHOrXZq11E*/
+/*Contenedor del baner, le pongo el largo al 100%, con margen auto para centrarlo y overflow para */
+.contenedor{
+    width: 100%;
+    margin: auto;
+    /*Para que el usuario no pueda ahcer scrol a la imagen*/
+    overflow: hidden;
+  }
+  
+  /*Este contenido es la image, y va a decir de que alto va a ser el Contenedor, */
+  #slider{
+    width: 2000px;
+    height: 150px;
+    /*Esta es la imagen*/
+    background-image: url(../imagenes/VIGILANDO.png);
+    /* Aca le digo que ocupe el 90 del ancho y del alto */
+    background-size: 90% 90%;
+    /* Coloco el nombre de la animacion y cuanto va a durar, linear determina que el tiempo de la animacion sea la misma*/ 
+    animation: slider 10s infinite linear;
+  }
+  /*Lo mismo de arriba, pero con imagen diferente*/
+  #slider2{
+    width: 2000px;
+    height: 150px;
+  
+    background-image: url(../imagenes/ALERTA.png);
+    background-size: 90% 90%;
+  
+    animation: slider 10s infinite linear;
+  }
+  
+  /*aca le digo hasta donde se tiene que mover la animacion*/
+  @keyframes slider{
+    to{
+      background-position: 2000px;
+    }
+  }

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!--Este color lo modifique en values/colors.xml y lo cargue ahi -->
+
+    <item android:drawable="@color/white"/>
+    <!--El tamaño se lo di al final de este video https://www.youtube.com/watch?v=60_Vao-oaKI -->
+    <item
+        android:top="150dp"
+        android:bottom="100dp"
+        >
+        <bitmap android:src="@mipmap/ic_launcher2_foreground"
+            />
+    </item>
+</layer-list>
