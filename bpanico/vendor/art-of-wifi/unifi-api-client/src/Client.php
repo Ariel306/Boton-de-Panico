@@ -23,12 +23,12 @@ class Client
     /**
      * private and protected properties
      */
-    private   $class_version      = '5.13.32';
-    protected $baseurl            = 'https://10.0.0.41:8443/manage/account/login';
-    protected $user               = 'ubnt';
-    protected $password           = 'master09*';
-    protected $site               = '37gm9avi';
-    protected $version            = '1.1.71';
+    private   $class_version      = 'bbbbb';
+    protected $baseurl            = 'bbbbb';
+    protected $user               = 'bbbbb';
+    protected $password           = 'bbbbb';
+    protected $site               = 'bbbbb';
+    protected $version            = 'bbbbb';
     protected $debug              = false;
     protected $ssl_verify_peer    = false;
     protected $ssl_verify_host    = false;
